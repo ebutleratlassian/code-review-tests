@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curDate=$(date "+%Y-%m-%d")
+curDate=$(date "+%Y-%m-%d-%s")
 git checkout -b $USER/$curDate
 for filename in $1/*.txt
 do
