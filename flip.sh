@@ -1,11 +1,10 @@
 #!/bin/bash
 
 curDate=$(date "+%Y-%m-%d")
-
+git checkout -b $USER/$1/$curDate
 for filename in $1/*.txt
 do
-  git checkout - $USER/$1/$curDate
   echo $(cat $filename | rev) > $filename
-  git add -A
-  git commit -m "Diff for $1"
 done
+git add -A
+git commit -m "Diff for $1"
